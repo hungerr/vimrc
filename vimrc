@@ -18,21 +18,23 @@ Plugin 'tell-k/vim-autopep8'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 "Enble folding
 set foldmethod=indent
 set foldlevel=99
-set nocompatible "¹Ø±ÕÓëviµÄ¼æÈİÄ£Ê½
-set number "ÏÔÊ¾ĞĞºÅ
-set nowrap    "²»×Ô¶¯ÕÛĞĞ
-set showmatch    "ÏÔÊ¾Æ¥ÅäµÄÀ¨ºÅ
-set scrolloff=3        "¾àÀë¶¥²¿ºÍµ×²¿3ĞĞ"
-set encoding=utf-8  "±àÂë
-set fenc=utf-8      "±àÂë
-"set mouse=a        "ÆôÓÃÊó±ê
-set hlsearch        "ËÑË÷¸ßÁÁ
+set nocompatible "å…³é—­ä¸viçš„å…¼å®¹æ¨¡å¼
+set number "æ˜¾ç¤ºè¡Œå·
+set nowrap    "ä¸è‡ªåŠ¨æŠ˜è¡Œ
+set showmatch    "æ˜¾ç¤ºåŒ¹é…çš„æ‹¬å·
+set scrolloff=3        "è·ç¦»é¡¶éƒ¨å’Œåº•éƒ¨3è¡Œ"
+set encoding=utf-8  "ç¼–ç 
+set fenc=utf-8      "ç¼–ç 
+"set mouse=a        "å¯ç”¨é¼ æ ‡
+set hlsearch        "æœç´¢é«˜äº®
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -40,7 +42,7 @@ nnoremap <C-H> <C-W><C-H>
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
-syntax on    "Óï·¨¸ßÁÁ
+syntax on    "è¯­æ³•é«˜äº®
 syntax enable
 set background=dark
 "colorscheme solarized
@@ -48,7 +50,7 @@ set t_Co=256
 let g:solarized_termcolors=256
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
-let g:indentLine_char='©ª'
+let g:indentLine_char='â”†'
 let g:indentLine_enabled = 1
 autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 au BufNewFile,BufRead *.py set tabstop=4
@@ -62,11 +64,12 @@ au BufNewFile,BufRead *.py set fileformat=unix
 let g:jedi#auto_initialization = 0
 let g:ycm_auto_trigger = 1
 
-let g:ycm_min_num_of_chars_for_completion = 2  "¿ªÊ¼²¹È«µÄ×Ö·ûÊı
-let g:ycm_python_binary_path = 'python'  "jediÄ£¿éËùÔÚpython½âÊÍÆ÷Â·¾¶
-let g:ycm_seed_identifiers_with_syntax = 1  "¿ªÆôÊ¹ÓÃÓïÑÔµÄÒ»Ğ©¹Ø¼ü×Ö²éÑ¯
-let g:ycm_autoclose_preview_window_after_completion=1 "²¹È«ºó×Ô¶¯¹Ø±ÕÔ¤ÀÀ´°
+let g:ycm_min_num_of_chars_for_completion = 2  "å¼€å§‹è¡¥å…¨çš„å­—ç¬¦æ•°
+let g:ycm_python_binary_path = 'python'  "jediæ¨¡å—æ‰€åœ¨pythonè§£é‡Šå™¨è·¯å¾„
+let g:ycm_seed_identifiers_with_syntax = 1  "å¼€å¯ä½¿ç”¨è¯­è¨€çš„ä¸€äº›å…³é”®å­—æŸ¥è¯¢
+let g:ycm_autoclose_preview_window_after_completion=1 "è¡¥å…¨åè‡ªåŠ¨å…³é—­é¢„è§ˆçª—
 
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
     exec "W"
