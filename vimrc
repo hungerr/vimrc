@@ -21,6 +21,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mattn/emmet-vim'
+Plugin 'posva/vim-vue'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -61,6 +62,13 @@ au BufNewFile,BufRead *.py set textwidth=79
 au BufNewFile,BufRead *.py set expandtab
 au BufNewFile,BufRead *.py set autoindent
 au BufNewFile,BufRead *.py set fileformat=unix
+
+au BufNewFile,BufRead *.html set tabstop=2
+au BufNewFile,BufRead *.html set softtabstop=2
+au BufNewFile,BufRead *.html set shiftwidth=2
+au BufNewFile,BufRead *.html set expandtab
+au BufNewFile,BufRead *.html set autoindent
+au BufNewFile,BufRead *.html set fileformat=unix
 
 let g:jedi#auto_initialization = 0
 let g:ycm_auto_trigger = 1
