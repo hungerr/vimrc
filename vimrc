@@ -63,12 +63,12 @@ au BufNewFile,BufRead *.py set expandtab
 au BufNewFile,BufRead *.py set autoindent
 au BufNewFile,BufRead *.py set fileformat=unix
 
-au BufNewFile,BufRead *.html set tabstop=2
-au BufNewFile,BufRead *.html set softtabstop=2
-au BufNewFile,BufRead *.html set shiftwidth=2
-au BufNewFile,BufRead *.html set expandtab
-au BufNewFile,BufRead *.html set autoindent
-au BufNewFile,BufRead *.html set fileformat=unix
+au BufNewFile,BufRead *.html,*.js,*.vue set tabstop=2
+au BufNewFile,BufRead *.html,*.js,*.vue set softtabstop=2
+au BufNewFile,BufRead *.html,*.js,*.vue set shiftwidth=2
+au BufNewFile,BufRead *.html,*.js,*.vue set expandtab
+au BufNewFile,BufRead *.html,*.js,*.vue set autoindent
+au BufNewFile,BufRead *.html,*.js,*.vue set fileformat=unix
 
 let g:jedi#auto_initialization = 0
 let g:ycm_auto_trigger = 1
