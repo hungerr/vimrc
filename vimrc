@@ -69,6 +69,7 @@ au BufNewFile,BufRead *.html,*.js,*.vue set shiftwidth=2
 au BufNewFile,BufRead *.html,*.js,*.vue set expandtab
 au BufNewFile,BufRead *.html,*.js,*.vue set autoindent
 au BufNewFile,BufRead *.html,*.js,*.vue set fileformat=unix
+au BufRead,BufNewFile *.wpy setlocal filetype=vue.html.javascript.css
 
 let g:jedi#auto_initialization = 0
 let g:ycm_auto_trigger = 1
