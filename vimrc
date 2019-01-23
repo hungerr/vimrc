@@ -81,6 +81,9 @@ let g:ycm_python_binary_path = 'python'  "jedi模块所在python解释器路径
 let g:ycm_seed_identifiers_with_syntax = 1  "开启使用语言的一些关键字查询
 let g:ycm_autoclose_preview_window_after_completion=1 "补全后自动关闭预览窗
 
+let g:syntastic_always_populate_loc_list = 1 "修复错误之后自动更新它的底部描述
+let g:syntastic_check_on_open = 1 "打开文件时 Syntastic 插件自动高亮显示错误
+let g:syntastic_auto_jump = 1 "保存或打开文件时让光标跳转到检测到的第一个问题处
 let g:syntastic_javascript_checkers = ['eslint']
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
