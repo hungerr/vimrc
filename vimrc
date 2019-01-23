@@ -81,6 +81,8 @@ let g:ycm_python_binary_path = 'python'  "jedi模块所在python解释器路径
 let g:ycm_seed_identifiers_with_syntax = 1  "开启使用语言的一些关键字查询
 let g:ycm_autoclose_preview_window_after_completion=1 "补全后自动关闭预览窗
 
+let g:syntastic_javascript_checkers = ['eslint']
+
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
